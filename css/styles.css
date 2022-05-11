@@ -125,6 +125,11 @@ body {
   color: var(--main-color);
 }
 
+.btn-cs-action:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
 /* Skill Section */
 .text-skill {
   font-size: 0.8rem;

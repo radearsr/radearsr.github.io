@@ -60,8 +60,17 @@ const scrollSpy = () => {
   });
 };
 
+const buttonSubmitAnimation = (buttonStatus) => {
+  const buttonSubmit = document.querySelector("button[type='submit']");
+  buttonSubmit.classList.toggle("btn-cs-action");
+  buttonSubmit.classList.toggle("btn-on-submit");
+  buttonSubmit.disabled = buttonStatus;
+};
+
 const sendContactForm = (event) => {
   event.preventDefault();
+
+  buttonSubmitAnimation(true);
 
   const formData = new FormData(event.target);
   const dateNow = new Date().toLocaleString();
@@ -109,8 +118,12 @@ const sendContactForm = (event) => {
         ? appearAlert(data.message, "alert-success", 3000)
         : appearAlert(data.message, "alert-danger", 3000);
       contactForm.reset();
+      buttonSubmitAnimation(false);
     })
-    .catch((error) => appearAlert(error.message, "alert-danger", 3000));
+    .catch((error) => {
+      appearAlert(error.message, "alert-danger", 3000);
+      buttonSubmitAnimation(false);
+    });
 };
 
 // Function Get Current Year for Copyright
