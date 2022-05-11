@@ -4,24 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="bootstrap-5.1.3/icons-1.8.1/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="bootstrap-5.1.3/css/bootstrap.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Personal Portfolio</title>
   </head>
   <body>
     <nav
-      class="
-        navbar
-        fixed-top
-        navbar-expand-lg navbar-light
-        bg-light
-        shadow
-        py-2
-      "
+      class="autohide navbar fixed-top navbar-expand-lg navbar-light py-2"
       id="navbar"
     >
-      <div class="container">
-        <a class="navbar-brand fs-3" href="#">RSR</a>
+      <div class="container justify-content-end">
         <button
           class="navbar-toggler"
           type="button"
@@ -31,161 +28,319 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-cs-icon"></span>
+          <span class="navbar-cs-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item px-2">
-              <a class="nav-link fs-5 active" aria-current="page" href="#"
-                >Home</a
+              <a class="nav-link active" aria-current="page" href="#home"
+                >HOME</a
               >
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link fs-5" href="#projects">Projects</a>
+              <a class="nav-link" href="#projects">PROJECTS</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link fs-5" href="#sertificate">Sertificate</a>
+              <a class="nav-link" href="#skills">SKILLS</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#sertificate">SERTIFICATE</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#contact">CONTACT</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <section id="welcome-section">
-      <div class="container">
-        <div class="jumbotron row align-items-center">
-          <div class="col-md-4">
-            <img src="img/profile.png" alt="Photo Profile" width="100%" />
+    <!-- Home Section -->
+    <section id="home">
+      <div class="container-md">
+        <div class="jumbotron row align-items-center flex-lg-row-reverse">
+          <div
+            class="col-md-4"
+            data-aos="fade-left"
+            data-aos-delay="1000"
+            data-aos-duration="1500"
+          >
+            <div class="img-profile">
+              <img
+                src="img/profile.png"
+                class="img-profile"
+                alt="Photo Profile"
+              />
+            </div>
           </div>
-          <div class="col-md-8">
-            <h1 class="display-4 fw-bold">I'm Radea Surya Ramandhita</h1>
-            <h2 class="display-5">Fullstack Web Developer</h2>
-            <p class="fs-5">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi
-              at iste inventore dignissimos pariatur temporibus dolorum dicta
-              esse dolor, quis, quae magni consectetur debitis reprehenderit
-              ipsum in voluptas dolore, ullam beatae! Asperiores numquam dolorem
-              iste vel corporis iure, hic aliquam?
+          <div
+            class="col-md-8"
+            data-aos="fade-right"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <h1 class="title">Hi, i'm <span>Radea</span></h1>
+            <h2 class="sub-title">Fullstack Web Developer</h2>
+            <p class="about-me me-lg-5">
+              Halo, Perkenalkan nama saya Radea Surya Ramandhita. Saya lulusan
+              Teknik Komputer Jaringan di SMKN 8 Semarang. Saya mampu membuat
+              aplikasi front end menggunakan React adapun kemampuan saya di back
+              end menggunakan Node JS/Express.
             </p>
-            <a
-              href="#project"
-              class="btn btn-outline-secondary btn-lg rounded-pill px-4"
-              >Contact Me</a
-            >
+            <div class="social-btn-wrapper">
+              <a
+                href="https://www.linkedin.com/in/radea-surya-ramandhita-6b0056230/"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a
+                href="https://github.com/radearsr"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="bi bi-github"></i>
+              </a>
+              <a
+                href="https://instagram.com/radea_surya"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="bi bi-file-earmark-text"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Project Section -->
     <section id="projects" class="py-4">
-      <h1 class="display-6 text-center fw-bold my-5">My Projects</h1>
-      <div class="container">
-        <div class="row justify-content-around">
-          <div class="col-md-4">
-            <div class="card project-tile mb-4">
-              <img
-                src="img/projects/project-1.jpg"
-                class="card-img-top"
-                alt="Project Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <a href="#" class="btn btn-secondary">Live Demo</a>
+      <div class="cotainer">
+        <h1 class="section-title">projects</h1>
+        <div class="row g-0 justify-content-center">
+          <div class="col-10">
+            <!-- Project 1 -->
+            <div
+              class="row mb-5"
+              data-aos-delay="100"
+              data-aos="zoom-in-up"
+              data-aos-duration="1000"
+            >
+              <div class="col-md-5 shadow-sm">
+                <img
+                  src="img/projects/project-6.png"
+                  alt=""
+                  class="img-fluid"
+                />
               </div>
-              <div class="card-footer">
-                <small class="text-muted">Publish Date</small>
+              <div class="col-md-7">
+                <h4 class="card-title fw-bold">Formulir Permohonan</h4>
+                <div class="stack-tech">
+                  <div class="badge bg-main">HTML</div>
+                  <div class="badge bg-main">CSS</div>
+                  <div class="badge bg-main">Javascript</div>
+                  <div class="badge bg-main">Bootstrap</div>
+                  <div class="badge bg-main">PHP</div>
+                  <div class="badge bg-main">MPDF</div>
+                  <div class="badge bg-main">My SQL</div>
+                </div>
+                <p class="card-text py-4">
+                  Repository Hasil Tugas Magang, Web Ini dibangun menggunakan
+                  bootstrap 5, dan libarary php mpdf untuk mencetak halaman web
+                  menjadi pdf
+                </p>
+                <div class="button-action">
+                  <a href="#" class="btn btn-cs-action">See Live</a>
+                  <a href="#" class="btn btn-cs-action">Source Code</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="img/projects/project-2.jpg"
-                class="card-img-top"
-                alt="Project Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <a href="#" class="btn btn-secondary">Live Demo</a>
+
+            <!-- Project 2 -->
+            <div
+              class="row mb-5"
+              data-aos="zoom-in-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+            >
+              <div class="col-md-5 shadow-sm">
+                <img
+                  src="img/projects/project-1.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
               </div>
-              <div class="card-footer">
-                <small class="text-muted">Publish Date</small>
+              <div class="col-md-7">
+                <h4 class="card-title fw-bold">Koleksi Kata Motivasi</h4>
+                <div class="stack-tech">
+                  <span class="badge bg-main">HTML</span>
+                  <span class="badge bg-main">CSS</span>
+                  <span class="badge bg-main">Javascript</span>
+                </div>
+                <p class="card-text py-4">
+                  Web Koleksi Motivasi ini berisi berberapa koleksi motivasi
+                  dari beberapa orang terkenal. Web dibuat untuk menyelesaikan
+                  Dicoding Project Submission Dasar Pemrograman Web (IDCAMP
+                  2021)
+                </p>
+                <div class="button-action">
+                  <a
+                    href="radearsr.github.io/web-koleksi-motivasi/"
+                    target="_blank"
+                    class="btn btn-cs-action"
+                    >See Live</a
+                  >
+                  <a
+                    href="https://github.com/radearsr/web-koleksi-motivasi"
+                    target="_blank"
+                    class="btn btn-cs-action"
+                    >Source Code</a
+                  >
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="img/projects/project-3.jpg"
-                class="card-img-top"
-                alt="Project Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <a href="#" class="btn btn-secondary">Live Demo</a>
+
+            <!-- Project 3 -->
+            <div
+              class="row mb-5"
+              data-aos="zoom-in-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+            >
+              <div class="col-md-5 shadow-sm">
+                <img
+                  src="img/projects/project-2.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
               </div>
-              <div class="card-footer">
-                <small class="text-muted">Publish Date</small>
+              <div class="col-md-7">
+                <h4 class="card-title fw-bold">Book Shelf</h4>
+                <div class="stack-tech">
+                  <div class="badge bg-main">HTML</div>
+                  <div class="badge bg-main">CSS</div>
+                  <div class="badge bg-main">Javascript</div>
+                </div>
+                <p class="card-text py-4">
+                  Book Shelf adalah aplikasi rak buku untuk mengatur buku web
+                  ini dibuat untuk menyelesaikan Dicoding Project Submission
+                  Front-End Pemula (IDCAMP 2021)
+                </p>
+                <div class="button-action">
+                  <a
+                    href="radearsr.github.io/bookshelf-apps/"
+                    target="_blank"
+                    class="btn btn-cs-action"
+                    >See Live</a
+                  >
+                  <a
+                    href="https://github.com/radearsr/bookshelf-apps"
+                    target="_blank"
+                    class="btn btn-cs-action"
+                    >Source Code</a
+                  >
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="img/projects/project-4.jpg"
-                class="card-img-top"
-                alt="Project Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <a href="#" class="btn btn-secondary">Live Demo</a>
+
+            <!-- Project 4 -->
+            <div
+              class="row mb-5"
+              data-aos="zoom-in-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+            >
+              <div class="col-md-5 shadow-sm">
+                <img
+                  src="img/projects/project-3.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
               </div>
-              <div class="card-footer">
-                <small class="text-muted">Publish Date</small>
+              <div class="col-md-7">
+                <h4 class="card-title fw-bold">FY Cinema</h4>
+                <div class="stack-tech">
+                  <span class="badge bg-main">HTML</span>
+                  <span class="badge bg-main">CSS</span>
+                  <span class="badge bg-main">Javascript</span>
+                  <span class="badge bg-main">Bootstrap</span>
+                  <span class="badge bg-main">Webpack</span>
+                  <span class="badge bg-main">API TMDB</span>
+                </div>
+                <p class="card-text py-4">
+                  FY Cinema adalah sebuah web untuk mencari film dengan data
+                  yang diperoleh dari API TMDB. Web dibuat untuk menyelesaikan
+                  Dicoding Project Submission Fundamental Front End Developer
+                  (IDCAMP 2021)
+                </p>
+                <div class="button-action">
+                  <a
+                    href="radearsr.github.io/fy-cinema/"
+                    target="_blank"
+                    class="btn btn-cs-action"
+                    >See Live</a
+                  >
+                  <a
+                    href="https://github.com/radearsr/fy-cinema"
+                    target="_blank"
+                    class="btn btn-cs-action"
+                    >Source Code</a
+                  >
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="img/projects/project-5.jpg"
-                class="card-img-top"
-                alt="Project Image"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </p>
-                <a href="#" class="btn btn-secondary">Live Demo</a>
+
+            <!-- Project 5 -->
+            <div
+              class="row mb-5"
+              data-aos="zoom-in-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+            >
+              <div class="col-md-5 shadow-sm">
+                <img
+                  src="img/projects/project-5.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
               </div>
-              <div class="card-footer">
-                <small class="text-muted">Publish Date</small>
+              <div class="col-md-7">
+                <h4 class="card-title fw-bold">Product Landing Page</h4>
+                <div class="stack-tech">
+                  <div class="badge bg-main">HTML</div>
+                  <div class="badge bg-main">CSS</div>
+                  <div class="badge bg-main">Javascript</div>
+                </div>
+                <p class="card-text py-4">
+                  Project Submission untuk freecodecamp Responsive Web Design
+                </p>
+                <div class="button-action">
+                  <a
+                    href="radearsr.github.io/product-landing-page/"
+                    class="btn btn-cs-action"
+                    target="_blank"
+                    >See Live</a
+                  >
+                  <a
+                    href="https://github.com/radearsr/product-landing-page"
+                    class="btn btn-cs-action"
+                    target="_blank"
+                    >Source Code</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-center shadow-sm">
+              <div class="col-md-4 text-center">
+                <a href="#" class="btn btn-link"
+                  >See More <i class="bi bi-arrow-right-square-fill"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -193,62 +348,236 @@
       </div>
     </section>
 
-    <section id="sertificate" class="py-4">
-      <h1 class="display-6 text-center fw-bold my-5">My Sertificate</h1>
+    <!-- Skill Section -->
+    <section id="skills">
+      <h1 class="section-title" data-aos="fade" data-aos-duration="500">
+        SKILLS
+      </h1>
       <div class="container">
-        <div class="row justify-content-around">
-          <div class="col-md-3">
-            <div class="card p-2 mb-5">
-              <img src="img/sertificate/dicoding-1.jpg" alt="Sertificate" />
+        <div class="row justify-content-evenly">
+          <div
+            class="col-11 col-md-5 border p-3 mt-2"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <h2 class="text-center">FRONT END</h2>
+            <div class="row justify-content-center">
+              <div class="col-4 skill-icon mt-4">
+                <img src="img/skill/html-5.png" class="img-fluid" alt="HTML" />
+                <span class="text-skill">HTML</span>
+              </div>
+              <div class="col-4 mt-4 skill-icon">
+                <img src="img/skill/css-3.png" class="img-fluid" alt="HTML" />
+                <span class="text-skill">CSS</span>
+              </div>
+              <div class="col-4 mt-4 skill-icon">
+                <img
+                  src="img/skill/javascript.png"
+                  class="img-fluid"
+                  alt="HTML"
+                />
+                <span class="text-skill">Javascript</span>
+              </div>
+              <div class="col-4 mt-4 skill-icon">
+                <img
+                  src="img/skill/bootstrap.png"
+                  class="img-fluid"
+                  alt="HTML"
+                />
+                <span class="text-skill">Bootstrap</span>
+              </div>
+              <div class="col-4 mt-4 skill-icon">
+                <img src="img/skill/react.png" class="img-fluid" alt="HTML" />
+                <span class="text-skill">React</span>
+              </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div
+            class="col-11 col-md-5 border p-3 mt-2"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <div class="row">
+              <h2 class="text-center">BACK END</h2>
+              <div class="col-4 mt-4 skill-icon">
+                <img src="img/skill/nodejs.png" alt="" class="img-fluid" />
+                <span class="text-skill">Node JS</span>
+              </div>
+              <div class="col-4 mt-4 skill-icon">
+                <img src="img/skill/express.png" alt="" class="img-fluid" />
+                <span class="text-skill">Express</span>
+              </div>
+              <div class="col-4 mt-4 skill-icon">
+                <img src="img/skill/php.png" alt="" class="img-fluid" />
+                <span class="text-skill">PHP</span>
+              </div>
+              <div class="col-4 mt-4 skill-icon">
+                <img src="img/skill/mysql.png" alt="" class="img-fluid" />
+                <span class="text-skill">MY SQL</span>
+              </div>
+              <div class="col-4 mt-4 skill-icon">
+                <img src="img/skill/mongodb.png" alt="" class="img-fluid" />
+                <span class="text-skill">MongoDB</span>
+              </div>
+              <div class="col-4 mt-4 skill-icon">
+                <img src="img/skill/api.png" alt="" class="img-fluid" />
+                <span class="text-skill">RESTful API</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-11 col-md-5 border p-3 mt-2"
+            data-aos="fade"
+            data-aos-duration="1000"
+          >
+            <div class="row">
+              <h2 class="text-center">OTHER</h2>
+              <div class="col-4 mt-4 skill-icon">
+                <img src="img/skill/arduino.png" alt="" class="img-fluid" />
+                <span class="text-skill">Arduino</span>
+              </div>
+              <div class="col-4 mt-4 skill-icon">
+                <img src="img/skill/linux.png" alt="" class="img-fluid" />
+                <span class="text-skill">Linux</span>
+              </div>
+              <div class="col-4 mt-4 skill-icon">
+                <img src="img/skill/mikrotik.png" alt="" class="img-fluid" />
+                <span class="text-skill">Mikrotik</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sertificate Section -->
+    <section id="sertificate" class="py-4">
+      <h1 class="section-title" data-aos="fade" data-aos-duration="500">
+        SERTIFICATE
+      </h1>
+      <div class="container">
+        <div class="row justify-content-around">
+          <div class="col-md-3" data-aos="flip-left" data-aos-duration="1000">
+            <div class="card p-2 mb-5">
+              <img src="img/sertificate/udemy-2.jpg" alt="Sertificate" />
+            </div>
+          </div>
+          <div class="col-md-3" data-aos="flip-left" data-aos-duration="1000">
             <div class="card p-2 mb-5">
               <img src="img/sertificate/dicoding-2.jpg" alt="Sertificate" />
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3" data-aos="flip-left" data-aos-duration="1000">
             <div class="card p-2 mb-5">
               <img src="img/sertificate/dicoding-3.jpg" alt="Sertificate" />
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3" data-aos="flip-left" data-aos-duration="1000">
             <div class="card p-2 mb-5">
-              <img src="img/sertificate/dicoding-4.jpg" alt="Sertificate" />
+              <img src="img/sertificate/udemy-1.jpg" alt="Sertificate" />
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3" data-aos="flip-left" data-aos-duration="1000">
             <div class="card p-2 mb-5">
               <img src="img/sertificate/progate-1.jpg" alt="Sertificate" />
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3" data-aos="flip-left" data-aos-duration="1000">
             <div class="card p-2 mb-5">
               <img src="img/sertificate/progate-2.jpg" alt="Sertificate" />
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3" data-aos="flip-left" data-aos-duration="1000">
             <div class="card p-2 mb-5">
               <img src="img/sertificate/progate-3.jpg" alt="Sertificate" />
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3" data-aos="flip-left" data-aos-duration="1000">
             <div class="card p-2 mb-5">
               <img src="img/sertificate/fcc-1.png" alt="Sertificate" />
             </div>
+          </div>
+          <div class="col-md-3" data-aos="flip-left" data-aos-duration="1000">
+            <div class="card p-2 mb-5">
+              <img src="img/sertificate/mikrotik.png" alt="Sertificate" />
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center shadow-sm">
+          <div class="col-md-4 text-center">
+            <a href="#" class="btn btn-link"
+              >See More <i class="bi bi-arrow-right-square-fill"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container pb-3">
+        <h1 class="section-title" data-aos="fade" data-aos-duration="500">
+          CONTACT ME
+        </h1>
+        <div id="alertMsg"></div>
+        <div
+          class="row justify-content-center py-5"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
+          <div class="col-12 col-sm-12 col-lg-8">
+            <form action="" id="contact-form">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="name"
+                  id="floatingInput"
+                  placeholder="Your Name"
+                  required
+                />
+                <label for="floatingInput">Full Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="floatEmail"
+                  placeholder="Email"
+                  required
+                />
+                <label for="floatEmail">Email</label>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  name="message"
+                  id="floatingTextarea"
+                  style="height: 100px"
+                  required
+                ></textarea>
+                <label for="floatingTextarea">Comments</label>
+              </div>
+              <button type="submit" class="btn btn-cs-action">Send</button>
+            </form>
           </div>
         </div>
       </div>
     </section>
 
     <footer id="about">
-      <div class="container text-center p-4">
-        <a href="#" class="btn" id="profile-link" target="_blank">Github</a>
-        <a href="#" id="profile-link" class="btn" target="_blank">Instagram</a>
-        <a href="#" id="profile-link" class="btn" target="_blank">Facebook</a>
-        <a href="#" id="profile-link" class="btn" target="_blank">Twitter</a>
-      </div>
+      <p>Made with ❤ by RADEARSR &copy; <span id="year"></span></p>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+    <script src="bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
-  <!-- <script src="fcc_debug.js"></script> -->
 </html>
