@@ -6,7 +6,6 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
 }
 
 /* width */
@@ -107,12 +106,14 @@ body {
 }
 
 .section-title {
-  padding: 3rem 0;
+  margin: 0 auto;
+  padding: 3.5rem 0;
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
   font-weight: bold;
+  margin-bottom: 2rem;
 }
 
 .bg-main {
@@ -120,6 +121,12 @@ body {
 }
 
 /* Project Section */
+.shadow-project {
+  box-shadow: 0px 0px 15px 5px rgba(155, 155, 155, 0.2);
+  /* border: 3px solid red; */
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
 .btn-cs-action {
   border: 1px solid rgb(33, 85, 205);
   color: var(--main-color);
@@ -128,6 +135,12 @@ body {
 .btn-cs-action:hover {
   background-color: var(--main-color);
   color: white;
+}
+
+.btn-on-submit {
+  background-color: var(--main-color);
+  color: white;
+  opacity: 0.5;
 }
 
 /* Skill Section */
@@ -162,12 +175,19 @@ footer > p {
 
 @media (max-width: 575px) {
   .img-profile {
-    width: 250px;
+    width: 200px;
   }
   .jumbotron .title {
     font-size: 2rem;
   }
   .jumbotron .sub-title {
     font-size: 1.5rem;
+  }
+  .jumbotron .about-me {
+    font-size: 0.9rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
   }
 }

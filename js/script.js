@@ -150,13 +150,11 @@ const hamburgerMenu = () => {
   }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  window.addEventListener("scroll", navbarAnimation);
-  window.addEventListener("scroll", scrollSpy);
+window.addEventListener("scroll", navbarAnimation);
+window.addEventListener("scroll", scrollSpy);
 
-  contactForm.addEventListener("submit", sendContactForm);
+contactForm.addEventListener("submit", sendContactForm);
 
-  navbarBtnToggler.addEventListener("click", hamburgerMenu);
+navbarBtnToggler.addEventListener("click", hamburgerMenu);
 
-  copyrightEl.textContent = getCurrentYear();
-});
+copyrightEl.textContent = getCurrentYear();
